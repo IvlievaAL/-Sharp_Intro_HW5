@@ -5,6 +5,7 @@ System.Console.WriteLine("Enter massive lenght: "); // Хочу, чтобы ра
 int size = Int32.Parse(System.Console.ReadLine());
 int []OursArray= MassiveOf3DigitsPositiveRandomNumbers(size);
 MassiveAsString (OursArray); // Выведи массив в консоль.
+System.Console.WriteLine(ToCountPositiveNumbersInMassive(OursArray));
 
 int[] MassiveOf3DigitsPositiveRandomNumbers(int size)
 {
@@ -21,4 +22,17 @@ void MassiveAsString (int [] OursArray)
 {
     string ArrayAsString = string.Join(" , ", OursArray); 
     System.Console.WriteLine(ArrayAsString);
+}
+
+int ToCountPositiveNumbersInMassive(int []OursArray)
+{
+    int count=0;
+    for (int index=0; index<OursArray.Length; index++)
+    {
+     if (OursArray[index]%2==0)
+     {
+        count++;
+     }
+    }
+    return count;
 }
