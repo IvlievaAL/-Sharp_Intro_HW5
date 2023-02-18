@@ -4,8 +4,9 @@
 System.Console.WriteLine("Enter massive lenght: "); // Хочу, чтобы размер массива задал пользователь.
 int size = Int32.Parse(System.Console.ReadLine());
 int []OursArray= MassiveOf3DigitsPositiveRandomNumbers(size);
-MassiveAsString (OursArray); // Выведи массив в консоль.
-System.Console.WriteLine(ToCountPositiveNumbersInMassive(OursArray));
+/*MassiveAsString (OursArray); // Вывод массива в консоль не удален 
+для удобства проверки дз, хотя по тз выводить сам массив не нужно*/
+System.Console.WriteLine(ToCountEvenNumbersInMassive(OursArray));
 
 int[] MassiveOf3DigitsPositiveRandomNumbers(int size)
 {
@@ -18,13 +19,13 @@ int[] MassiveOf3DigitsPositiveRandomNumbers(int size)
  return ArrayOfNumbers;
 }
 
-void MassiveAsString (int [] OursArray)
+/*void MassiveAsString (int [] OursArray)
 {
     string ArrayAsString = string.Join(" , ", OursArray); 
     System.Console.WriteLine(ArrayAsString);
-}
+}*/
 
-int ToCountPositiveNumbersInMassive(int []OursArray)
+int ToCountEvenNumbersInMassive(int []OursArray)
 {
     int count=0;
     for (int index=0; index<OursArray.Length; index++)
